@@ -154,6 +154,10 @@
             opacity: 0;
             transform: translateY(60px) scale(0.95);
             animation: categoryIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 18px;
         }
 
         .category:nth-child(1) { animation-delay: 0.2s; }
@@ -168,18 +172,28 @@
             background: linear-gradient(90deg, #fff176 0%, #00f2fe 100%);
         }
 
+        .category-img-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+        }
+
         .category img {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
             transition: opacity 0.3s, filter 0.3s;
             filter: brightness(0.95) saturate(1.2);
-        }
-
-        .category .hover-img {
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        .category .hover-img {
             opacity: 0;
         }
 
@@ -191,19 +205,26 @@
             opacity: 1;
         }
 
-        .category::after {
-            content: '✨';
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 2rem;
-            opacity: 0.7;
-            pointer-events: none;
-            transition: opacity 0.3s;
+        .category-hint {
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+            color: #fff176;
+            font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+            letter-spacing: 1px;
+            animation: popIn 0.8s;
+            text-align: center;
         }
 
-        .category:hover::after {
-            opacity: 1;
+        .category-name {
+            margin-top: 12px;
+            font-size: 1.3rem;
+            color: #fff;
+            font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            animation: fadeInUp 0.8s;
         }
 
         .testimonials {
@@ -308,44 +329,55 @@
             <h1 class="main-title">ENGLOOM <span style="font-size:2rem;">🌈</span></h1>
             <p class="tagline">LET YOUR ENGLISH BLOOM <span style="font-size:1.2rem;">🚀</span></p>
         </section>
+        <div class="marquee">
+            <span class="marquee-content">
+                Google &nbsp; • &nbsp; Facebook &nbsp; • &nbsp; YouTube &nbsp; • &nbsp; Instagram &nbsp; • &nbsp; TikTok &nbsp; • &nbsp; Netflix &nbsp; • &nbsp; Spotify &nbsp; • &nbsp; Twitter &nbsp; • &nbsp; Snapchat &nbsp; • &nbsp; WhatsApp &nbsp; • &nbsp; Discord &nbsp; • &nbsp; Reddit &nbsp; • &nbsp; LinkedIn &nbsp; • &nbsp; Twitch &nbsp; • &nbsp; Pinterest
+            </span>
+        </div>
+        <section class="categories">
+            <a href="horror.html" class="category">
+                <div class="category-hint">👻 Explore Horror</div>
+                <div class="category-img-container">
+                    <img src="1.jpg" alt="Horror English Words" class="main-img">
+                    <img src="2.jpg" alt="Horror English Words Hover" class="hover-img">
+                </div>
+                <div class="category-name">Horror English</div>
+            </a>
+            <a href="racism.html" class="category">
+                <div class="category-hint">🗣️ Speak Up</div>
+                <div class="category-img-container">
+                    <img src="3.jpg" alt="Racism English Words" class="main-img">
+                    <img src="4.jpg" alt="Racism English Words Hover" class="hover-img">
+                </div>
+                <div class="category-name">Racism English</div>
+            </a>
+            <a href="playboy.html" class="category">
+                <div class="category-hint">😎 Get Flirty</div>
+                <div class="category-img-container">
+                    <img src="5.jpg" alt="Playboy English Words" class="main-img">
+                    <img src="6.jpg" alt="Playboy English Words Hover" class="hover-img">
+                </div>
+                <div class="category-name">Playboy English</div>
+            </a>
+            <a href="friendly.html" class="category">
+                <div class="category-hint">🤗 Be Friendly</div>
+                <div class="category-img-container">
+                    <img src="7.jpg" alt="Friendly English Words" class="main-img">
+                    <img src="8.jpg" alt="Friendly English Words Hover" class="hover-img">
+                </div>
+                <div class="category-name">Friendly English</div>
+            </a>
+        </section>
         <section class="why-edtech">
             <h2>Why ENGLOOM is the <span style="color:#4facfe;">Best EdTech</span> for English? <span style="font-size:1.5rem;">👑</span></h2>
             <ul>
                 <li><span style="font-size:1.5rem;">🔥</span> <b>Gen Z Roasting Mode</b>: Learn English with meme-worthy, playful roasts. No boring lessons here!</li>
                 <li><span style="font-size:1.5rem;">👻</span> <b>Horror-Style Learning</b>: Spooky stories & jump-scare vocab to keep you on your toes!</li>
                 <li><span style="font-size:1.5rem;">😂</span> <b>Meme & Pop Culture Vibes</b>: Lessons inspired by viral trends, TikTok, and your favorite shows.</li>
-                <li><span style="font-size:1.5rem;">��</span> <b>Gamified Challenges</b>: Level up your English with fun, animated quizzes and rewards.</li>
+                <li><span style="font-size:1.5rem;">🎮</span> <b>Gamified Challenges</b>: Level up your English with fun, animated quizzes and rewards.</li>
                 <li><span style="font-size:1.5rem;">💬</span> <b>Real Talk</b>: Practice with slang, emojis, and real Gen Z convos. No cringe, just vibes!</li>
             </ul>
         </section>
-        <div class="marquee">
-            <span class="marquee-content">
-                Google &nbsp; • &nbsp; Facebook &nbsp; • &nbsp; YouTube &nbsp; • &nbsp; Instagram &nbsp; • &nbsp; TikTok &nbsp; • &nbsp; Netflix &nbsp; • &nbsp; Spotify &nbsp; • &nbsp; Twitter &nbsp; • &nbsp; Snapchat &nbsp; • &nbsp; WhatsApp &nbsp; • &nbsp; Discord &nbsp; • &nbsp; Reddit &nbsp; • &nbsp; LinkedIn &nbsp; • &nbsp; Twitch &nbsp; • &nbsp; Pinterest
-            </span>
-        </div>
-
-        <section class="categories">
-            <a href="horror.html" class="category">
-                <img src="1.jpg" alt="Horror English Words" class="main-img">
-                <img src="2.jpg" alt="Horror English Words Hover" class="hover-img">
-            </a>
-            
-            <a href="racism.html" class="category">
-                <img src="3.jpg" alt="Racism English Words" class="main-img">
-                <img src="4.jpg" alt="Racism English Words Hover" class="hover-img">
-            </a>
-            
-            <a href="playboy.html" class="category">
-                <img src="5.jpg" alt="Playboy English Words" class="main-img">
-                <img src="6.jpg" alt="Playboy English Words Hover" class="hover-img">
-            </a>
-            
-            <a href="friendly.html" class="category">
-                <img src="7.jpg" alt="Friendly English Words" class="main-img">
-                <img src="8.jpg" alt="Friendly English Words Hover" class="hover-img">
-            </a>
-        </section>
-
         <section class="testimonials">
             <h2 style="text-align:center;font-family:'Poppins','Comic Sans MS',cursive,sans-serif;font-size:2rem;animation:popIn 1.1s 1.2s both;">What Our Students Say <span style="font-size:1.2rem;">💬</span></h2>
             <div class="testimonial-grid">
@@ -363,7 +395,6 @@
                 </div>
             </div>
         </section>
-
         <section class="video-section">
             <iframe 
                 src="https://www.youtube.com/embed/nirajsfkaf" 
